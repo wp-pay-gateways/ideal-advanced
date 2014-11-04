@@ -180,7 +180,6 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Client {
 			'headers'   => array(
 				'Content-Type' => 'text/xml; charset=' . Pronamic_WP_Pay_Gateways_IDealAdvanced_XML_Message::XML_ENCODING,
 			),
-			'sslverify' => false,
 			'body'      => $data,
 		) );
 
