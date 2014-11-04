@@ -7,5 +7,6 @@
 
 ## Providers
 
+*	Friesland Bank
 *	ING
 *	Rabobank
