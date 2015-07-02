@@ -18,27 +18,27 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_XML_TransactionParser implements Pr
 		$transaction = new Pronamic_WP_Pay_Gateways_IDealAdvanced_Transaction();
 
 		if ( $xml->transactionID ) {
-			$transaction->setId( Pronamic_XML_Util::filter( $xml->transactionID ) );
+			$transaction->setId( Pronamic_WP_Pay_XML_Security::filter( $xml->transactionID ) );
 		}
 
 		if ( $xml->purchaseID ) {
-			$transaction->setPurchaseId( Pronamic_XML_Util::filter( $xml->purchaseID ) );
+			$transaction->setPurchaseId( Pronamic_WP_Pay_XML_Security::filter( $xml->purchaseID ) );
 		}
 
 		if ( $xml->status ) {
-			$transaction->setStatus( Pronamic_XML_Util::filter( $xml->status ) );
+			$transaction->setStatus( Pronamic_WP_Pay_XML_Security::filter( $xml->status ) );
 		}
 
 		if ( $xml->consumerName ) {
-			$transaction->setConsumerName( Pronamic_XML_Util::filter( $xml->consumerName ) );
+			$transaction->setConsumerName( Pronamic_WP_Pay_XML_Security::filter( $xml->consumerName ) );
 		}
 
 		if ( $xml->consumerAccountNumber ) {
-			$transaction->setConsumerAccountNumber( Pronamic_XML_Util::filter( $xml->consumerAccountNumber ) );
+			$transaction->setConsumerAccountNumber( Pronamic_WP_Pay_XML_Security::filter( $xml->consumerAccountNumber ) );
 		}
 
 		if ( $xml->consumerCity ) {
-			$transaction->setConsumerCity( Pronamic_XML_Util::filter( $xml->consumerCity ) );
+			$transaction->setConsumerCity( Pronamic_WP_Pay_XML_Security::filter( $xml->consumerCity ) );
 		}
 
 		return $transaction;
