@@ -69,15 +69,11 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Security {
 				$fingerprint = base64_decode( $output );
 
 				// Hash
-				if ( $hash !== null ) {
+				if ( null !== $hash ) {
 					$fingerprint = hash( $hash, $fingerprint );
 				}
-			} else {
-				// @todo what to do?
-			}
-		} else {
-			// @todo what to do?
-		}
+			} // @todo else what to do?
+		} // @todo else what to do?
 
 		return $fingerprint;
 	}
@@ -85,7 +81,8 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Security {
 	//////////////////////////////////////////////////
 
 	/**
-	 * function to sign a message
+	 * Function to sign a message
+	 *
 	 * @param filename of the private key
 	 * @param message to sign
 	 * @return signature
@@ -103,9 +100,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Security {
 
 			// Free the key from memory
 			openssl_free_key( $resource );
-		} else {
-			// @todo what to do?
-		}
+		} // @todo else what to do?
 
 		return $signature;
 	}

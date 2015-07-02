@@ -175,7 +175,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Transaction {
 	/**
 	 * Get the purchase ID of this transaction
 	 *
-	 * the purchase number according to the online shop’s system
+	 * The purchase number according to the online shop’s system
 	 *
 	 * @return string
 	 */
@@ -186,7 +186,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Transaction {
 	/**
 	 * Set the purchase id of this transaction
 	 *
-	 * the purchase number according to the online shop’s system
+	 * The purchase number according to the online shop’s system
 	 *
 	 * @param string $id
 	 */
@@ -300,7 +300,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Transaction {
 	/**
 	 * Get the entrance code of this transaction
 	 *
-	 * a code determined by the online shop with which the purchase can be
+	 * A code determined by the online shop with which the purchase can be
 	 * authenticated upon redirection to the online shop (see section 4.2.2
 	 * for details).
 	 *
@@ -314,7 +314,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Transaction {
 	 * Set the entrancode
 	 * ANS..max40 (ANS = Strictly alphanumerical (letters and numbers only))
 	 *
-	 * a code determined by the online shop with which the purchase can be
+	 * A code determined by the online shop with which the purchase can be
 	 * authenticated upon redirection to the online shop (see section 4.2.2
 	 * for details).
 	 *
