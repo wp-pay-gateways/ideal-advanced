@@ -2,17 +2,12 @@
 
 /**
  * Title: iDEAL response XML message
- * Description: 
+ * Description:
  * Copyright: Copyright (c) 2005 - 2015
  * Company: Pronamic
  * @author Remco Tolsma
  * @version 1.0.0
  */
 abstract class Pronamic_WP_Pay_Gateways_IDealAdvanced_XML_ResponseMessage extends Pronamic_WP_Pay_Gateways_IDealAdvanced_XML_Message {
-	/**
-	 * Constructs and initialize an response message
-	 */
-	public function __construct( $name ) {
-		parent::__construct( $name );
-	}
+
 }

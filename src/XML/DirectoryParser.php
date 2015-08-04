@@ -18,7 +18,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_XML_DirectoryParser implements Pron
 	public static function parse( SimpleXMLElement $xml ) {
 		$directory = new Pronamic_WP_Pay_Gateways_IDealAdvanced_Directory();
 
-		$timestamp = Pronamic_XML_Util::filter( $xml->directoryDateTimeStamp );
+		$timestamp = Pronamic_WP_Pay_XML_Security::filter( $xml->directoryDateTimeStamp );
 		$directory->setDate( new DateTime( $timestamp ) );
 
 		foreach ( $xml->Issuer as $element ) {

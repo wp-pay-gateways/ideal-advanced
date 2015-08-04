@@ -187,7 +187,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Client {
 		if ( is_wp_error( $response ) ) {
 			$this->error = $response;
 		} else {
-			if ( wp_remote_retrieve_response_code( $response ) == 200 ) {
+			if ( 200 === wp_remote_retrieve_response_code( $response ) ) {
 				$body = wp_remote_retrieve_body( $response );
 
 				$xml = Pronamic_WP_Util::simplexml_load_string( $body );
@@ -283,7 +283,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Client {
 
 		$directory = $this->getDirectory();
 
-		if ( $directory != null ) {
+		if ( null !== $directory ) {
 			$issuers = $directory->getIssuers();
 		}
 
@@ -300,7 +300,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Client {
 
 		$directory = $this->getDirectory();
 
-		if ( $directory != null ) {
+		if ( null !== $directory ) {
 			$lists = $directory->getLists();
 		}
 

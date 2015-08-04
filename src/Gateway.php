@@ -54,7 +54,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Gateway extends Pronamic_WP_Pay_Gat
 
 		$lists = null;
 
-		if ( $result !== null ) {
+		if ( null !== $result ) {
 			$lists = $result;
 		} elseif ( $error = $this->client->get_error() ) {
 			$this->error = $error;
@@ -84,7 +84,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Gateway extends Pronamic_WP_Pay_Gat
 				}
 
 				$choices[] = array(
-					'name'    => ( $name == Pronamic_WP_Pay_Gateways_IDealAdvanced_Issuer::LIST_LONG ) ? __( '&mdash; Other banks &mdash;', 'pronamic_ideal' ) : false,
+					'name'    => ( Pronamic_WP_Pay_Gateways_IDealAdvanced_Issuer::LIST_LONG === $name ) ? __( '&mdash; Other banks &mdash;', 'pronamic_ideal' ) : false,
 					'options' => $options,
 				);
 			}
@@ -129,7 +129,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Gateway extends Pronamic_WP_Pay_Gat
 
 		$error = $this->client->get_error();
 
-		if ( $error !== null ) {
+		if ( null !== $error ) {
 			$this->error = $error;
 		} else {
 			$payment->set_action_url( $result->issuer->authenticationUrl );
@@ -185,7 +185,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Gateway extends Pronamic_WP_Pay_Gat
 
 		$error = $this->client->get_error();
 
-		if ( $error !== null ) {
+		if ( null !== $error ) {
 			$this->set_error( $error );
 		} else {
 			$transaction = $result->transaction;

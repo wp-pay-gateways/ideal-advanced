@@ -18,19 +18,19 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_XML_IssuerParser implements Pronami
 		$issuer = new Pronamic_WP_Pay_Gateways_IDealAdvanced_Issuer();
 
 		if ( $xml->issuerID ) {
-			$issuer->setId( Pronamic_XML_Util::filter( $xml->issuerID ) );
+			$issuer->setId( Pronamic_WP_Pay_XML_Security::filter( $xml->issuerID ) );
 		}
 
 		if ( $xml->issuerName ) {
-			$issuer->setName( Pronamic_XML_Util::filter( $xml->issuerName ) );
+			$issuer->setName( Pronamic_WP_Pay_XML_Security::filter( $xml->issuerName ) );
 		}
 
 		if ( $xml->issuerList ) {
-			$issuer->setList( Pronamic_XML_Util::filter( $xml->issuerList ) );
+			$issuer->setList( Pronamic_WP_Pay_XML_Security::filter( $xml->issuerList ) );
 		}
 
 		if ( $xml->issuerAuthenticationURL ) {
-			$issuer->authenticationUrl = Pronamic_XML_Util::filter( $xml->issuerAuthenticationURL );
+			$issuer->authenticationUrl = Pronamic_WP_Pay_XML_Security::filter( $xml->issuerAuthenticationURL );
 		}
 
 		return $issuer;
