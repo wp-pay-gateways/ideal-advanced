@@ -10,3 +10,4 @@
 *	Friesland Bank
 *	ING
 *	Rabobank
+*	Postcode.nl
