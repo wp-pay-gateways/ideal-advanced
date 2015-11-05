@@ -123,9 +123,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Gateway extends Pronamic_WP_Pay_Gat
 		$transaction->setDescription( $data->get_description() );
 		$transaction->setEntranceCode( $data->get_entrance_code() );
 
-		$return_url = add_query_arg( 'payment', $payment->get_id(), home_url( '/' ) );
-
-		$result = $this->client->create_transaction( $transaction, $return_url, $data->get_issuer_id() );
+		$result = $this->client->create_transaction( $transaction, $payment->get_return_url(), $data->get_issuer_id() );
 
 		$error = $this->client->get_error();
 
