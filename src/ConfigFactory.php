@@ -11,12 +11,15 @@
 class Pronamic_WP_Pay_Gateways_IDealAdvanced_ConfigFactory extends Pronamic_WP_Pay_GatewayConfigFactory {
 	private $config_class;
 
-	public function __construct( $config_class = 'Pronamic_WP_Pay_Gateways_IDealAdvanced_Config' ) {
-		$this->config_class = $config_class;
+	public function __construct( $config_class = 'Pronamic_WP_Pay_Gateways_IDealAdvanced_Config', $config_test_class = 'Pronamic_WP_Pay_Gateways_IDealAdvanced_Config' ) {
+		$this->config_class      = $config_class;
+		$this->config_test_class = $config_test_class;
 	}
 
 	public function get_config( $post_id ) {
-		$config_class = $this->config_class;
+		$mode = get_post_meta( $post_id, '_pronamic_gateway_mode', true );
+
+		$config_class = ( 'test' === $mode ) ? $this->config_test_class : $this->config_class;
 
 		$config = new $config_class();
 
@@ -27,35 +30,6 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_ConfigFactory extends Pronamic_WP_P
 		$config->private_key          = get_post_meta( $post_id, '_pronamic_gateway_ideal_private_key', true );
 		$config->private_key_password = get_post_meta( $post_id, '_pronamic_gateway_ideal_private_key_password', true );
 		$config->private_certificate  = get_post_meta( $post_id, '_pronamic_gateway_ideal_private_certificate', true );
-
-		$gateway_id = get_post_meta( $post_id, '_pronamic_gateway_id', true );
-		$mode       = get_post_meta( $post_id, '_pronamic_gateway_mode', true );
-
-		global $pronamic_pay_gateways;
-
-		$gateway  = $pronamic_pay_gateways[ $gateway_id ];
-		$settings = $gateway[ $mode ];
-
-		$url = $settings['payment_server_url'];
-
-		$config->directory_request_url   = $url;
-		$config->transaction_request_url = $url;
-		$config->status_request_url      = $url;
-
-		if ( isset( $settings['directory_request_url'] ) ) {
-			$client->directory_request_url = $settings['directory_request_url'];
-		}
-		if ( isset( $settings['transaction_request_url'] ) ) {
-			$client->transaction_request_url = $settings['transaction_request_url'];
-		}
-		if ( isset( $settings['status_request_url'] ) ) {
-			$client->status_request_url = $settings['status_request_url'];
-		}
-
-		$config->certificates = array();
-		foreach ( $gateway['certificates'] as $certificate ) {
-			$config->certificates[] = $certificate;
-		}
 
 		return $config;
 	}
