@@ -9,8 +9,16 @@
  * @version 1.0.0
  */
 class Pronamic_WP_Pay_Gateways_IDealAdvanced_ConfigFactory extends Pronamic_WP_Pay_GatewayConfigFactory {
+	private $config_class;
+
+	public function __construct( $config_class = 'Pronamic_WP_Pay_Gateways_IDealAdvanced_Config' ) {
+		$this->config_class = $config_class;
+	}
+
 	public function get_config( $post_id ) {
-		$config = new Pronamic_WP_Pay_Gateways_IDealAdvanced_Config();
+		$config_class = $this->config_class;
+
+		$config = new $config_class();
 
 		$config->merchant_id = get_post_meta( $post_id, '_pronamic_gateway_ideal_merchant_id', true );
 		$config->sub_id      = get_post_meta( $post_id, '_pronamic_gateway_ideal_sub_id', true );
