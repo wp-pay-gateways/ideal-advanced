@@ -4,21 +4,78 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b2e90a14dd93fea967b056be0fb05f9d",
-    "content-hash": "04a60ac9292853a89e4e79e8694009f0",
+    "hash": "11be35afeac349059ea56bcf3b9b5588",
+    "content-hash": "2d0f63df1df3e25f91a00a9f888a4bc6",
     "packages": [
+        {
+            "name": "wp-pay-gateways/common",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/wp-pay-gateways/common.git",
+                "reference": "66a36014eaa96b657fd3ac3ade7f6c68c1b3c695"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/wp-pay-gateways/common/zipball/66a36014eaa96b657fd3ac3ade7f6c68c1b3c695",
+                "reference": "66a36014eaa96b657fd3ac3ade7f6c68c1b3c695",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4",
+                "wp-pay/core": "dev-develop"
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "classmap": [
+                    "src/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-3.0+"
+            ],
+            "authors": [
+                {
+                    "name": "Remco Tolsma",
+                    "email": "info@remcotolsma.nl",
+                    "homepage": "http://www.remcotolsma.nl/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Pronamic",
+                    "email": "info@pronamic.eu",
+                    "homepage": "http://www.pronamic.eu/",
+                    "role": "Company"
+                }
+            ],
+            "description": "Common driver for the WordPress payment processing library.",
+            "homepage": "http://www.wp-pay.org/gateways/common/",
+            "keywords": [
+                "common",
+                "gateway",
+                "pay",
+                "pronamic",
+                "wordpress",
+                "wp"
+            ],
+            "time": "2015-11-19 07:11:15"
+        },
         {
             "name": "wp-pay-gateways/ideal",
             "version": "dev-develop",
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-pay-gateways/ideal.git",
-                "reference": "21c37b5db392a4c54515b86bbea90f22dadd1a73"
+                "reference": "72e4964c53c337ce22c54a895b8226a1b03bf850"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-pay-gateways/ideal/zipball/21c37b5db392a4c54515b86bbea90f22dadd1a73",
-                "reference": "21c37b5db392a4c54515b86bbea90f22dadd1a73",
+                "url": "https://api.github.com/repos/wp-pay-gateways/ideal/zipball/72e4964c53c337ce22c54a895b8226a1b03bf850",
+                "reference": "72e4964c53c337ce22c54a895b8226a1b03bf850",
                 "shasum": ""
             },
             "require": {
@@ -44,7 +101,7 @@
                 "wordpress",
                 "wp"
             ],
-            "time": "2015-11-02 15:53:39"
+            "time": "2015-11-04 13:38:46"
         },
         {
             "name": "wp-pay/core",
@@ -52,12 +109,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/wp-pay/core.git",
-                "reference": "575e40f2b441bb0565125492fe4248a13813f43b"
+                "reference": "2359885cebc9329e46a6defac841117deda76fa6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-pay/core/zipball/575e40f2b441bb0565125492fe4248a13813f43b",
-                "reference": "575e40f2b441bb0565125492fe4248a13813f43b",
+                "url": "https://api.github.com/repos/wp-pay/core/zipball/2359885cebc9329e46a6defac841117deda76fa6",
+                "reference": "2359885cebc9329e46a6defac841117deda76fa6",
                 "shasum": ""
             },
             "require": {
@@ -101,7 +158,7 @@
                 "issues": "https://github.com/wp-pay/core/issues",
                 "source": "https://github.com/wp-pay/core"
             },
-            "time": "2015-11-02 14:30:13"
+            "time": "2015-11-12 13:02:52"
         }
     ],
     "packages-dev": [
@@ -616,6 +673,7 @@
     "minimum-stability": "stable",
     "stability-flags": {
         "wp-pay/core": 20,
+        "wp-pay-gateways/common": 20,
         "wp-pay-gateways/ideal": 20,
         "satooshi/php-coveralls": 20
     },
