@@ -144,7 +144,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Gateway extends Pronamic_WP_Pay_Gat
 		$transaction->setPurchaseId( $purchase_id );
 		$transaction->setAmount( $data->get_amount() );
 		$transaction->setCurrency( $data->get_currency() );
-		$transaction->setExpirationPeriod( 'PT3M30S' );
+		$transaction->setExpirationPeriod( 'PT30M' );
 		$transaction->setLanguage( $data->get_language() );
 		$transaction->setDescription( $data->get_description() );
 		$transaction->setEntranceCode( $data->get_entrance_code() );
