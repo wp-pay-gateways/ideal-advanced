@@ -24,18 +24,18 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Gateway extends Pronamic_WP_Pay_Gat
 
 		// Client
 		$client = new Pronamic_WP_Pay_Gateways_IDealAdvanced_Client();
-		$client->setAcquirerUrl( $config->directory_request_url );
+		$client->setAcquirerUrl( $config->get_payment_server_url() );
 		$client->merchant_id = $config->merchant_id;
 		$client->sub_id = $config->sub_id;
 		$client->setPrivateKey( $config->private_key );
 		$client->setPrivateKeyPassword( $config->private_key_password );
 		$client->setPrivateCertificate( $config->private_certificate );
 
-		$client->directory_request_url   = $config->directory_request_url;
-		$client->transaction_request_url = $config->transaction_request_url;
-		$client->status_request_url      = $config->status_request_url;
+		$client->directory_request_url   = $config->get_directory_request_url();
+		$client->transaction_request_url = $config->get_transaction_request_url();
+		$client->status_request_url      = $config->get_status_request_url();
 
-		foreach ( $config->certificates as $certificate ) {
+		foreach ( $config->get_certificates() as $certificate ) {
 			$client->addPublicCertificate( $certificate );
 		}
 

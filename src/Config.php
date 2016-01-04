@@ -18,4 +18,24 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Config extends Pronamic_WP_Pay_Gate
 	public $private_key;
 
 	public $private_certificate;
+
+	public function get_payment_server_url() {
+		return $this->payment_server_url;
+	}
+
+	public function get_directory_request_url() {
+		return $this->get_payment_server_url();
+	}
+
+	public function get_transaction_request_url() {
+		return $this->get_payment_server_url();
+	}
+
+	public function get_status_request_url() {
+		return $this->get_payment_server_url();
+	}
+
+	public function get_certificates() {
+		return array();
+	}
 }
