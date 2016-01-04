@@ -5,8 +5,14 @@
 		<exclude name="Generic.Files.LowercasedFilename.NotFound" />
 		<exclude name="Generic.PHP.NoSilencedErrors.Discouraged" />
 
+		<exclude name="PEAR.Functions.FunctionCallSignature.Indent" />
+
 		<exclude name="Squiz.Commenting" />
 
 		<exclude name="WordPress.NamingConventions.ValidFunctionName.FunctionNameInvalid" />
+	</rule>
+
+	<rule ref="WordPress.VIP.SlowDBQuery.slow_db_query">
+		<exclude-pattern>src/Settings.php</exclude-pattern>
 	</rule>
 </ruleset>

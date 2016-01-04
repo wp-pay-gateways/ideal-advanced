@@ -179,7 +179,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Settings extends Pronamic_WP_Pay_Ga
 
 		echo '</div>';
 	}
-		
+
 	public function field_private_certificate( $field ) {
 		$certificate = get_post_meta( get_the_ID(), '_pronamic_gateway_ideal_private_certificate', true );
 
