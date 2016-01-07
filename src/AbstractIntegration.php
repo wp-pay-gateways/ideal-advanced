@@ -20,7 +20,7 @@ abstract class Pronamic_WP_Pay_Gateways_IDealAdvanced_AbstractIntegration extend
 	public function get_settings_class() {
 		return array(
 			'Pronamic_WP_Pay_Gateways_IDeal_Settings',
-			'Pronamic_WP_Pay_Gateways_IDealBasic_Settings',
+			'Pronamic_WP_Pay_Gateways_IDealAdvanced_Settings',
 		);
 	}
 
