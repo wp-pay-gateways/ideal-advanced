@@ -7,6 +7,9 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 ## [Unreleased][unreleased]
 -
 
+## [1.1.2] - 2016-02-01
+- Added new gateway settings system.
+
 ## [1.1.1] - 2015-08-04
 - Use the XML security filter function from the wp-pay/core library.
 
@@ -20,7 +23,8 @@ This projects adheres to [Semantic Versioning](http://semver.org/) and [Keep a C
 ## 1.0.0 - 2015-01-19
 - First release.
 
-[unreleased]: https://github.com/wp-pay-gateways/ideal-advanced/compare/1.1.1...HEAD
+[unreleased]: https://github.com/wp-pay-gateways/ideal-advanced/compare/1.1.2...HEAD
+[1.1.2]: https://github.com/wp-pay-gateways/ideal-advanced/compare/1.1.1...1.1.2
 [1.1.1]: https://github.com/wp-pay-gateways/ideal-advanced/compare/1.1.0...1.1.1
 [1.1.0]: https://github.com/wp-pay-gateways/ideal-advanced/compare/1.0.1...1.1.0
 [1.0.1]: https://github.com/wp-pay-gateways/ideal-advanced/compare/1.0.0...1.0.1
