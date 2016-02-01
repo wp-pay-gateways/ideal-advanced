@@ -3,8 +3,9 @@
 /**
  * Title: iDEAL request XML message
  * Description:
- * Copyright: Copyright (c) 2005 - 2015
+ * Copyright: Copyright (c) 2005 - 2016
  * Company: Pronamic
+ *
  * @author Remco Tolsma
  * @version 1.0.0
  */
@@ -80,7 +81,7 @@ abstract class Pronamic_WP_Pay_Gateways_IDealAdvanced_XML_RequestMessage extends
 
 	/**
 	 * Sign this request message
-	 * .
+	 *
 	 * @param string $privateKeyFile
 	 * @param string $privateKeyPassword
 	 */
