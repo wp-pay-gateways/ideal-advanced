@@ -1,4 +1,4 @@
-# WordPress Pay Gateway: iDEAL Advanced
+# [DEPRECATED] WordPress Pay Gateway: iDEAL Advanced
 
 **iDEAL Advanced driver for the WordPress payment processing library.**
 

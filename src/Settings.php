@@ -25,13 +25,13 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Settings extends Pronamic_WP_Pay_Ga
 		// iDEAL Advanced
 		$sections['ideal_advanced'] = array(
 			'title'   => __( 'iDEAL Advanced', 'pronamic_ideal' ),
-			'methods' => array( 'ideal_advanced', 'ideal_advanced_v3' ),
+			'methods' => array( 'ideal-advanced' ),
 		);
 
 		// Private Key and Certificate
 		$sections['ideal_advanced_private'] = array(
 			'title'   => __( 'Private Key and Certificate', 'pronamic_ideal' ),
-			'methods' => array( 'ideal_advanced', 'ideal_advanced_v3' ),
+			'methods' => array( 'ideal-advanced' ),
 		);
 
 		// Return
