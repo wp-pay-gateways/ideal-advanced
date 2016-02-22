@@ -1,7 +1,7 @@
 {
 	"name": "wp-pay-gateways/ideal-advanced",
-	"description": "iDEAL Advanced driver for the WordPress payment processing library.",
-	"keywords": ["wordpress", "wp", "pay", "ideal", "advanced", "gateway", "pronamic"],
+	"description": "[DEPRECATED] iDEAL Advanced driver for the WordPress payment processing library.",
+	"keywords": ["wordpress", "wp", "pay", "ideal", "advanced", "gateway", "pronamic", "deprecated"],
 	"homepage": "https://github.com/wp-pay-gateways/ideal-advanced",
 	"autoload": {
 		"classmap": ["src/"]

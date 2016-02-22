@@ -1,14 +1,15 @@
 {
   "name": "ideal-advanced",
   "version": "1.1.3",
-  "description": "iDEAL Advanced v3 driver for the WordPress payment processing library.",
+  "description": "[DEPRECATED] iDEAL Advanced v3 driver for the WordPress payment processing library.",
   "repository": {
     "type": "git",
     "url": "https://github.com/wp-pay-gateways/ideal-advanced"
   },
   "keywords": [
     "ideal",
-    "advanced"
+    "advanced",
+    "deprecated"
   ],
   "author": "Pronamic",
   "license": "GPL-3.0",
