@@ -11,16 +11,7 @@
  * @since 1.2.0
  */
 class Pronamic_WP_Pay_Gateways_IDealAdvanced_Settings extends Pronamic_WP_Pay_GatewaySettings {
-	/**
-	 * Default private key password
-	 *
-	 * @var string
-	 */
-	var $defaultPrivateKeyPassword = '';
-
 	public function __construct() {
-		$this->defaultPrivateKeyPassword = substr( str_shuffle( 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789' ) , 0 , 20 );
-
 		// Filters
 		add_filter( 'pronamic_pay_gateway_fields', array( $this, 'fields' ) );
 
@@ -153,6 +144,8 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Settings extends Pronamic_WP_Pay_Ga
 		);
 
 		// Private Key Password
+		$default_password = substr( str_shuffle( 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789' ) , 0 , 20 );
+
 		$fields[] = array(
 			'filter'      => FILTER_SANITIZE_STRING,
 			'section'     => 'ideal',
@@ -162,7 +155,7 @@ class Pronamic_WP_Pay_Gateways_IDealAdvanced_Settings extends Pronamic_WP_Pay_Ga
 			'title'       => __( 'Private Key Password', 'pronamic_ideal' ),
 			'type'        => 'text',
 			'classes'     => array( 'regular-text', 'code' ),
-			'default'     => $this->defaultPrivateKeyPassword,
+			'default'     => $default_password,
 			'tooltip'     => __( 'A random password which will be used for the generation of the private key and certificate.', 'pronamic_ideal' ),
 		);
 
